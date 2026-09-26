@@ -9,10 +9,10 @@ public partial class CharacterBody2d : CharacterBody2D
 
 	private float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 
-    public override void _Ready()
-    {
-        GD.Print("Game Started");
-    }
+	public override void _Ready()
+	{
+		GD.Print("Game Started");
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -31,6 +31,8 @@ public partial class CharacterBody2d : CharacterBody2D
 		float directionX = 0f;
 		if (Input.IsActionPressed("ui_left")) directionX -= 1f;
 		if (Input.IsActionPressed("ui_right")) directionX += 1f;
+
+		GD.Print($"Is on floor: {IsOnFloor()}");
 
 		velocity.X = directionX * Speed;
 
