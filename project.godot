@@ -13,7 +13,7 @@ config_version=5
 config/name="2DProject"
 run/main_scene="uid://bvb3qydqj86un"
 config/features=PackedStringArray("4.7", "C#", "Mobile")
-config/icon="res://Player/icon.svg"
+config/icon="res://Main/icon.svg"
 
 [display]
 
