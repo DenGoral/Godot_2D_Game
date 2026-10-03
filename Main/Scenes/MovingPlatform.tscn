@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://pc6g0nkhawqv"]
+
+[ext_resource type="Texture2D" uid="uid://c5h00rmttojv1" path="res://Assets/Sprites/platform_moving_green.png" id="1_e4snq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4qs1"]
+size = Vector2(32, 10)
+
+[node name="MovingPlatform" type="AnimatableBody2D" unique_id=1882749668]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1548327574]
+texture = ExtResource("1_e4snq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=980389334]
+shape = SubResource("RectangleShape2D_m4qs1")
