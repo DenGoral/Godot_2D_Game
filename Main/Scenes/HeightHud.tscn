@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c55mf0ia7ra7j"]
+
+[ext_resource type="Script" uid="uid://kn4xjtdmf552" path="res://HeightHud.cs" id="1_vorjy"]
+[ext_resource type="FontFile" uid="uid://b55cavvta3opt" path="res://Assets/Fonts/PixelOperator8-Bold.ttf" id="2_j50j5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lukxu"]
+line_spacing = 11.92
+font = ExtResource("2_j50j5")
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1qlb7"]
+font = ExtResource("2_j50j5")
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HeightHud" type="CanvasLayer" unique_id=1042531435 node_paths=PackedStringArray("_heightLabel", "_toastLabel")]
+script = ExtResource("1_vorjy")
+_heightLabel = NodePath("HeightLabel")
+_toastLabel = NodePath("ToastLabel")
+
+[node name="HeightLabel" type="Label" parent="." unique_id=1963942234]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 160.0
+offset_bottom = 39.0
+text = "Loading...
+Loading..."
+label_settings = SubResource("LabelSettings_lukxu")
+uppercase = true
+
+[node name="ToastLabel" type="Label" parent="." unique_id=2030371121]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 39.0
+grow_horizontal = 2
+text = "Loading..."
+label_settings = SubResource("LabelSettings_1qlb7")
+uppercase = true

@@ -48,6 +48,7 @@ grow_vertical = 2
 
 [node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1272641114 node_paths=PackedStringArray("_resumeButton", "_settingsButton", "_achivementsButton", "_clickPlayer", "_hoverPlayer")]
 process_mode = 3
+layer = 10
 script = ExtResource("1_etnfi")
 _resumeButton = NodePath("CenterContainer/Control/Resume")
 _settingsButton = NodePath("CenterContainer/Control/Settings")
