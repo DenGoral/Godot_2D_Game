@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfobphfiadtwa"]
 
-[ext_resource type="Script" uid="uid://xlutmfnbon88" path="res://HeightTracker.cs" id="1_v5omx"]
+[ext_resource type="Script" uid="uid://xlutmfnbon88" path="res://Scripts/HeightTracker.cs" id="1_v5omx"]
 
 [node name="HeightTracker" type="Node" unique_id=1268860601]
 script = ExtResource("1_v5omx")

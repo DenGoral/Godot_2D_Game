@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0dvckqq5yvfs"]
 
-[ext_resource type="Script" uid="uid://ba2g1703inbsu" path="res://PauseMenu.cs" id="1_etnfi"]
+[ext_resource type="Script" uid="uid://ba2g1703inbsu" path="res://Scripts/PauseMenu.cs" id="1_etnfi"]
 [ext_resource type="Shader" uid="uid://bs7cuu42p5n2r" path="res://PauseMenu.gdshader" id="1_nov15"]
 [ext_resource type="FontFile" uid="uid://b55cavvta3opt" path="res://Assets/Fonts/PixelOperator8-Bold.ttf" id="3_qg8xq"]
 [ext_resource type="Texture2D" uid="uid://beinsqh4oymyp" path="res://Assets/Menu/Buttons/Play.png" id="4_36k83"]

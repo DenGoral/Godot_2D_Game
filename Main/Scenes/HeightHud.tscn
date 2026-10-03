@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c55mf0ia7ra7j"]
 
-[ext_resource type="Script" uid="uid://kn4xjtdmf552" path="res://HeightHud.cs" id="1_vorjy"]
+[ext_resource type="Script" uid="uid://kn4xjtdmf552" path="res://Scripts/HeightHud.cs" id="1_vorjy"]
 [ext_resource type="FontFile" uid="uid://b55cavvta3opt" path="res://Assets/Fonts/PixelOperator8-Bold.ttf" id="2_j50j5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lukxu"]

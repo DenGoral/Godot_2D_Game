@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c4ae8se5sgmg4" path="res://Assets/Sprites/world_tileset.png" id="1_5wali"]
 [ext_resource type="PackedScene" uid="uid://pc6g0nkhawqv" path="res://Main/Scenes/MovingPlatform.tscn" id="1_sem31"]
-[ext_resource type="Script" uid="uid://b7k725cfmcpfp" path="res://Main/CharacterBody2d.cs" id="3_o756f"]
+[ext_resource type="Script" uid="uid://b7k725cfmcpfp" path="res://Scripts/CharacterBody2d.cs" id="3_o756f"]
 [ext_resource type="Texture2D" uid="uid://gnl1xung5jds" path="res://Assets/Main Characters/Ninja Frog/Fall (32x32).png" id="4_5veik"]
 [ext_resource type="Texture2D" uid="uid://crb6lv8qqy2mh" path="res://Assets/Main Characters/Ninja Frog/Idle (32x32).png" id="5_vd0en"]
 [ext_resource type="Texture2D" uid="uid://b6qgvl7qmrso4" path="res://Assets/Main Characters/Ninja Frog/Jump (32x32).png" id="6_6br3t"]
