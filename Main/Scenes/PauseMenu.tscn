@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://0dvckqq5yvfs"]
+
+[ext_resource type="Script" uid="uid://ba2g1703inbsu" path="res://PauseMenu.cs" id="1_etnfi"]
+[ext_resource type="Shader" uid="uid://bs7cuu42p5n2r" path="res://PauseMenu.gdshader" id="1_nov15"]
+[ext_resource type="FontFile" uid="uid://b55cavvta3opt" path="res://Assets/Fonts/PixelOperator8-Bold.ttf" id="3_qg8xq"]
+[ext_resource type="Texture2D" uid="uid://beinsqh4oymyp" path="res://Assets/Menu/Buttons/Play.png" id="4_36k83"]
+[ext_resource type="Texture2D" uid="uid://bfm434wkejhc0" path="res://Assets/Menu/Buttons/Settings.png" id="5_ux6cm"]
+[ext_resource type="Texture2D" uid="uid://dlo0vvswpewmc" path="res://Assets/Menu/Buttons/Achievements.png" id="6_l8esi"]
+[ext_resource type="AudioStream" uid="uid://dke4m4lndt4ds" path="res://Assets/Sounds/UI_Sounds/button_click.mp3" id="7_m3mvq"]
+[ext_resource type="AudioStream" uid="uid://d2flh0eewlxxy" path="res://Assets/Sounds/UI_Sounds/button_hover.mp3" id="8_y2ptd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lukxu"]
+shader = ExtResource("1_nov15")
+shader_parameter/blur_amount = 2.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_lukxu"]
+font = ExtResource("3_qg8xq")
+font_size = 97
+outline_size = 15
+outline_color = Color(0.78707165, 0.5246978, 1.92523e-07, 1)
+shadow_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_1qlb7"]
+font = ExtResource("3_qg8xq")
+font_size = 40
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jmijv"]
+font = ExtResource("3_qg8xq")
+font_size = 25
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m4qs1"]
+font = ExtResource("3_qg8xq")
+font_size = 19
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[node name="PauseMenu" type="Control" unique_id=1166647531]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1272641114 node_paths=PackedStringArray("_resumeButton", "_settingsButton", "_achivementsButton", "_clickPlayer", "_hoverPlayer")]
+process_mode = 3
+script = ExtResource("1_etnfi")
+_resumeButton = NodePath("CenterContainer/Control/Resume")
+_settingsButton = NodePath("CenterContainer/Control/Settings")
+_achivementsButton = NodePath("CenterContainer/Control/Anchivements")
+_clickPlayer = NodePath("ClickSound")
+_hoverPlayer = NodePath("HoverSound")
+
+[node name="Blur" type="ColorRect" parent="PauseMenu" unique_id=984042505]
+material = SubResource("ShaderMaterial_lukxu")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="PauseMenu" unique_id=593288043]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="PauseMenu/CenterContainer" unique_id=1484580462]
+layout_mode = 2
+
+[node name="PausedLabel" type="Label" parent="PauseMenu/CenterContainer/Control" unique_id=97204509]
+custom_minimum_size = Vector2(500, 120)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -250.0
+offset_top = -302.0
+offset_right = 250.0
+offset_bottom = -182.0
+grow_horizontal = 2
+text = "Paused"
+label_settings = SubResource("LabelSettings_lukxu")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true
+
+[node name="Resume" type="TextureButton" parent="PauseMenu/CenterContainer/Control" unique_id=94806909]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_36k83")
+stretch_mode = 0
+
+[node name="Settings" type="TextureButton" parent="PauseMenu/CenterContainer/Control" unique_id=1571016733]
+layout_mode = 0
+offset_left = -400.0
+offset_top = -100.0
+offset_right = -200.0
+offset_bottom = 100.0
+texture_normal = ExtResource("5_ux6cm")
+stretch_mode = 0
+
+[node name="Anchivements" type="TextureButton" parent="PauseMenu/CenterContainer/Control" unique_id=468482617]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 200.74
+offset_top = -100.0
+offset_right = 400.7399
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_l8esi")
+stretch_mode = 0
+
+[node name="ResumeLabel" type="Label" parent="PauseMenu/CenterContainer/Control" unique_id=477006354]
+visible = false
+layout_mode = 0
+offset_left = -132.0
+offset_top = 178.0
+offset_right = 132.0
+offset_bottom = 234.0
+text = "RESUME"
+label_settings = SubResource("LabelSettings_1qlb7")
+uppercase = true
+
+[node name="SettingsLabel" type="Label" parent="PauseMenu/CenterContainer/Control" unique_id=1409171811]
+visible = false
+layout_mode = 0
+offset_left = -398.0
+offset_top = 125.0
+offset_right = -204.0
+offset_bottom = 165.0
+text = "Settings"
+label_settings = SubResource("LabelSettings_jmijv")
+uppercase = true
+
+[node name="AnchivementsLabel" type="Label" parent="PauseMenu/CenterContainer/Control" unique_id=1461162931]
+visible = false
+layout_mode = 0
+offset_left = 196.0
+offset_top = 118.0
+offset_right = 414.0
+offset_bottom = 142.0
+text = "achivements"
+label_settings = SubResource("LabelSettings_m4qs1")
+uppercase = true
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="PauseMenu" unique_id=1815601888]
+stream = ExtResource("7_m3mvq")
+
+[node name="HoverSound" type="AudioStreamPlayer" parent="PauseMenu" unique_id=83942491]
+stream = ExtResource("8_y2ptd")
