@@ -2,6 +2,10 @@ using Godot;
 
 public partial class HeightHud : CanvasLayer
 {
+	// sound fx
+	[Export] private AudioStreamPlayer _achivementReached;	
+
+	// main fields
 	[Export] private HeightTracker _tracker;
 	[Export] private Label _heightLabel;
 	[Export] private Label _toastLabel;
@@ -23,6 +27,7 @@ public partial class HeightHud : CanvasLayer
 	private void OnMilestoneReached(int meters)
 	{
 		GD.Print($"Milestone reached: {meters} m"); // the badge system will hook in here later
+		_achivementReached.Play();
 
 		_toastLabel.Text = $"{meters} m reached!";
 		_toastLabel.Visible = true;

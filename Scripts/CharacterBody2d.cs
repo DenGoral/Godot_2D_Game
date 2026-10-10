@@ -8,11 +8,17 @@ public partial class CharacterBody2d : CharacterBody2D
 	[Export] private AnimatedSprite2D _animatedSprite;
 	[Export] private Camera2D _camera2d;
 
+	// sound effects
+	[Export] private AudioStreamPlayer _jumpSound;
+	[Export] private AudioStreamPlayer _music;
+
 	private float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 
 	public override void _Ready()
 	{
 		GD.Print("Game Started");
+
+		_music.Play();
 		_camera2d.PositionSmoothingEnabled = false;
 		
 		EnableWithDelay();
@@ -30,6 +36,7 @@ public partial class CharacterBody2d : CharacterBody2D
 		if (Input.IsActionJustPressed("jump") && IsOnFloor())
 		{
 			velocity.Y = JumpVelocity;
+			_jumpSound.Play();
 		}
 
 		float directionX = 0f;
