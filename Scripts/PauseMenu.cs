@@ -3,13 +3,17 @@ using Godot;
 
 public partial class PauseMenu : CanvasLayer
 {
+	// buttons
 	[Export] private TextureButton _resumeButton;
 	[Export] private TextureButton _settingsButton;
 	[Export] private TextureButton _achivementsButton;
 
+
+	// sound fx
 	[Export] private AudioStreamPlayer _clickPlayer;
 	[Export] private AudioStreamPlayer _hoverPlayer;
 
+	// constant values
 	private const float NormalScale = 1.0f;
 	private const float HoverScale = 1.1f;
 	private const float PressedScale = 0.9f;
