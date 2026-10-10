@@ -6,12 +6,16 @@ public partial class CharacterBody2d : CharacterBody2D
 	private const float JumpVelocity = -300.0f;
 
 	[Export] private AnimatedSprite2D _animatedSprite;
+	[Export] private Camera2D _camera2d;
 
 	private float gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();
 
 	public override void _Ready()
 	{
 		GD.Print("Game Started");
+		_camera2d.PositionSmoothingEnabled = false;
+		
+		EnableWithDelay();
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -68,5 +72,12 @@ public partial class CharacterBody2d : CharacterBody2D
 		{
 			_animatedSprite.Play(animationName);
 		}
+	}
+	
+	
+	private async void EnableWithDelay()
+	{
+		await ToSignal(GetTree().CreateTimer(1.0f), SceneTreeTimer.SignalName.Timeout);
+		_camera2d.PositionSmoothingEnabled = true;
 	}
 }
