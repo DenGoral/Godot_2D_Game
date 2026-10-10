@@ -2,7 +2,7 @@ using Godot;
 
 public partial class HeightHud : CanvasLayer
 {
-	// sound fx
+	// sound effects
 	[Export] private AudioStreamPlayer _achivementReached;	
 
 	// main fields
