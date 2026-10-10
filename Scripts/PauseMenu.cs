@@ -41,7 +41,7 @@ public partial class PauseMenu : CanvasLayer
 
 	private void SetupButtonAnimation(TextureButton button)
 	{
-		// Scale from the center of the button instead of the top-left corner
+		// scale from the center of the button instead of the topleft corner
 		button.PivotOffset = button.Size / 2;
 		button.Resized += () => button.PivotOffset = button.Size / 2;
 
